@@ -38,6 +38,9 @@ namespace NpgsqlBenchRetrieve {
 					var b = (int)dr[1];
 					var c = (int)dr[2];
 					var d = (int)dr[3];
+					if (a != b || b != c || c != d) {
+						throw new Exception();
+					}
 				}
 			}
 		}
@@ -50,6 +53,9 @@ namespace NpgsqlBenchRetrieve {
 					var b = dr.GetInt32(1);
 					var c = dr.GetInt32(2);
 					var d = dr.GetInt32(3);
+					if (a != b || b != c || c != d) {
+						throw new Exception();
+					}
 				}
 			}
 		}
